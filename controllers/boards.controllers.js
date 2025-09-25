@@ -50,6 +50,9 @@ const getUpdate = (req,res) => {
 
 // 글 수정 페이지에서 post 발생시
 const postUpdate = (req,res) => {
+    const now = new Date();
+    const date = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+
     const { user_id } = req.params;
     const { writer, title, content } = req.body;
     const board = boards.find((board) => user_id === board.user_id);
@@ -57,6 +60,7 @@ const postUpdate = (req,res) => {
     board.writer = writer;
     board.title = title;
     board.content = content;
+    board.updated_at = date;
     
     res.redirect(`/boards/view/${user_id}`);
 

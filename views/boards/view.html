@@ -21,6 +21,12 @@
         <div class="contentArea">
             <p>{{ board.content }}</p>
             <p>작성된 날짜 / {{ board.created_at }}</p>
+            {% if board.updated_at == " " %}
+            <p>수정된 날짜 / 아직 수정되지 않았습니다.</p>
+            {% else %}
+            <p>수정된 날짜 /{{ board.updated_at }} </p>
+            {% endif %} 
+
         </div>
         <div class="buttonArea">
             <button type="button" onclick="location.href=`/boards`">뒤로 가기</button>

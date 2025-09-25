@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판페이지</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/list.css">
 </head>
 <body>
     <header>
@@ -12,14 +14,14 @@
         </div>
     </header>
     <main>
-        <div>
-            <h3>이곳은 게시판 페이지 입니다!</h3>
+        <h3>이곳은 게시판 페이지 입니다!</h3>
+        <div class="listArea">
             <ul>
                 {% for board in boards %}
                     <li>
-                        <a>{{ board.id }}</a>
+                        <a>[ {{ board.id }} ]</a>
                         <a href="/boards/view/{{ board.user_id }}">{{ board.title }}</a>
-                        <a>{{ board.writer }}</a>
+                        <a>작성자 / {{ board.writer }}</a>
                         <a>{{ board.created_at }}</a>
                     </li>
                 {% endfor %}

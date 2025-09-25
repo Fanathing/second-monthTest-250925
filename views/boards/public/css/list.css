@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .listArea {
+   
+}
+
+main h3 {
+
+
+}
+
+main ul {
+    padding: 30px 0;
+    list-style: none;
+}
+
+main li {
+    background-color: #FFFAFA;
+    display: flex;
+    align-items: center;
+    border: 2px solid #EE82EE;
+    width: 800px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+main li a {
+
+    padding: 8px;
+    text-decoration: none;
+    color: #2C3E50;
+}
+
+main li a:nth-child(1) {
+
+    width: 80px;
+}
+main li a:nth-child(2) { 
+    width: 500px; 
+}
+main li a:nth-child(3) { 
+    width: 110px; 
+}
+main li a:nth-child(4) {
+    width: 100px; 
+    }
+
+
+main a {}
+
+main .buttonArea {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+main .buttonArea > button {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    border: 0px;
+    border-radius: 5px;
+    
+    color: #FFFFFF;
+
+}
+
+main .buttonArea > button:nth-child(1) {
+background-color: #C0C0C0;
+}
+
+main .buttonArea > button:nth-child(2) {
+background-color: #3498DB;
+}
+
+
+
+

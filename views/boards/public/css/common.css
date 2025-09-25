@@ -10,6 +10,11 @@ header {
     height: 60px;
 }
 
+header > div > h1 {
+    margin: 0 0 0 50px;
+    color: #FFFFFF;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -28,4 +33,14 @@ footer {
     width: 100%;
     height: 60px;
     
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    margin: 15px 0;
+   color: #BDC3C7;
 }

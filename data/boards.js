@@ -1,4 +1,4 @@
-const boardList = [
+const boards = [
   {
     id: 1,
     user_id: "wnqudgus5565",
@@ -9,3 +9,5 @@ const boardList = [
     created_at: "2025-09-25"
   }
 ];
+
+module.exports = boards;

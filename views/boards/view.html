@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ board.user_id }} 상세페이지</title>
+    <title>{{ board.user_id }}의 상세페이지</title>
 </head>
 <body>
     <header>
@@ -12,18 +12,18 @@
         </div>
     </header>
     <inner>
-        <div class="title">
-            <h3> {{ board.title }}</h3>
+        <div class="titleArea">
+            <a> {{ board.title }} / </a>
+            <a> {{ board.writer }}</a>
         </div>
-        <div class="content">
-            <p> {{ board.writer }}</p>
+        <div class="contentArea">
             <p> {{ board.content }}</p>
-            <p>{{ board.created_at }}</p>
+            <p>작성된 날짜 / {{ board.created_at }}</p>
         </div>
         <div class="buttonArea">
             <button type="button" onclick="location.href=`/boards`">뒤로 가기</button>
-            <button type="button" onclick="location.href=`/boards/update{{ board.user_id }}`">수정 하기</button>
-            <button type="button" onclick="location.href=`/boards/delete{{ board.user_id }}`">삭제 하기</button>
+            <button type="button" onclick="location.href=`/boards/update/{{ board.user_id }}`">수정 하기</button>
+            <button type="button" onclick="location.href=`/boards/delete/{{ board.user_id }}`">삭제 하기</button>
         </div>
     </inner>
     <footer>

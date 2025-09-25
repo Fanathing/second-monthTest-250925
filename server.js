@@ -14,6 +14,9 @@ app.set("view engine", "html");
 nunjucks.configure("views", {
     express: app
 })
+// 정적파일을 불러오는 static 설정
+app.use(express.static(`${path}/public`));
+
 
 // "/" 요청시 메인페이지인 index.html 응답
 app.get("/", (req,res) => {

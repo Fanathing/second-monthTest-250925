@@ -17,7 +17,7 @@
     <main>
         <h3>이곳은 [ {{ board.title }} ] 글의 수정 페이지 입니다!</h3>
         <div>
-            <form action="/boards/update/{{ board.user_id }}" method="post">
+            <form class="updateForm"action="/boards/update/{{ board.user_id }}" method="post">
                 <p>닉네임</p>
                 <input type="text" name="writer" value="{{ board.writer }}"/>
                 <p>제목</p>
@@ -36,5 +36,6 @@
             <p>© 250925 @All Copyright to 성영</p>
         </div>
     </footer>
+    <script src="/js/update.js"></script>
 </body>
 </html>

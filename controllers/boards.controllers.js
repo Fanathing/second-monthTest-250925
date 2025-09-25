@@ -63,8 +63,7 @@ const postUpdate = (req,res) => {
     board.content = content;
     board.updated_at = date;
     
-    res.redirect(`/boards/view/${user_id}`);
-
+    return res.json({ success: true, message: "글 수정 성공"});
 }
 
 // 글 상세페이지에서 삭제 버튼으로 get 발생시

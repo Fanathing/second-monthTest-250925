@@ -17,6 +17,9 @@
         <h3>이곳은 게시판 페이지 입니다!</h3>
         <div class="listArea">
             <ul>
+                {% if 0 == boards.length %}
+                    <h4>-아직 작성된 글이 없습니다!-</h4>
+                {% endif %}
                 {% for board in boards %}
                     <li>
                         <a>[ {{ board.id }} ]</a>

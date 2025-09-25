@@ -1,5 +1,6 @@
 const updateForm = document.querySelector(".updateForm");
 // location.search와는 다르게 경로명을 반환해줌
+// nunjucks 문법은 html안에서만 작동할 수 있어서 번거롭지만 이렇게 처리하도록함
 const url = location.pathname.split("/");
 const user_id = url[3];
 

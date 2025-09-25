@@ -22,16 +22,16 @@
             <p>{{ board.content }}</p>
             <p>작성된 날짜 / {{ board.created_at }}</p>
             {% if board.updated_at == " " %}
-            <p>수정된 날짜 / 아직 수정되지 않았습니다.</p>
+                <p>수정된 날짜 / 아직 수정되지 않았습니다.</p>
             {% else %}
-            <p>수정된 날짜 /{{ board.updated_at }} </p>
-            {% endif %} 
+                <p>수정된 날짜 /{{ board.updated_at }} </p>
+            {% endif %}
 
         </div>
         <div class="buttonArea">
             <button type="button" onclick="location.href=`/boards`">뒤로 가기</button>
             <button type="button" onclick="location.href=`/boards/update/{{ board.user_id }}`">수정 하기</button>
-            <button type="button" onclick="location.href=`/boards/delete/{{ board.user_id }}`">삭제 하기</button>
+            <button class="deleteBtn"type="button">삭제 하기</button>
         </div>
     </main>
     <footer>
@@ -39,5 +39,6 @@
             <p>© 250925 @All Copyright to 성영</p>
         </div>
     </footer>
+    <script src="/js/view.js"></script>
 </body>
 </html>

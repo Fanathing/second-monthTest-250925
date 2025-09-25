@@ -25,7 +25,8 @@ const postCreate = (req,res) => {
     title: title,
     content: content,
     hit: 0,
-    created_at:date
+    created_at:date,
+    updated_at:" "
    });
 
    return res.json({ success: true, message: "글 생성 성공"});
@@ -75,16 +76,7 @@ const getDelete = (req,res) => {
             boards.splice(i, 1);
         }
     })
-     // return res.json({ success: true, message: "삭제 성공"})
-
-    // for(let i = 0; i < boards.length; i++) {
-    //     if(user_id === boards[i].user_id) {
-    //         boards.splice(i, 1);
-    //         break;
-    //     }
-    // }
-    res.redirect(`/boards`);
-
+    return res.json({ success: true, message: "글 삭제 성공"});
 }
 module.exports = {
     getList,

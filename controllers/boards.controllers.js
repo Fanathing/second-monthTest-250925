@@ -71,7 +71,7 @@ const getDelete = (req,res) => {
             boards.splice(i, 1);
         }
     })
-        // return res.json({ success: true, message: "삭제 성공"})
+     // return res.json({ success: true, message: "삭제 성공"})
 
     // for(let i = 0; i < boards.length; i++) {
     //     if(user_id === boards[i].user_id) {

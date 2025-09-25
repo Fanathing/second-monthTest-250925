@@ -1,0 +1,60 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titleArea {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    padding: 30px 0;
+}
+.titleArea a {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contentArea {
+    margin: 20px 0;
+    background-color: #FFFAFA;
+    text-align: center;
+    width: 800px;
+    border: 1px solid #EE82EE;
+    height: 600px;
+}
+
+.contentArea p{
+    margin: 20px 0;
+}
+
+.buttonArea {
+    padding: 20px 0;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.buttonArea > button {
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    border: 0px;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.buttonArea > button:nth-child(1) {
+background-color: #C0C0C0;
+}
+
+.buttonArea > button:nth-child(2) {
+background-color: #3498DB;
+}
+
+.buttonArea > button:nth-child(3) {
+background-color: #B22222;
+}
+

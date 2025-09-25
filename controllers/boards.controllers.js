@@ -1,17 +1,17 @@
 const path = require("path");
 const boards = require(`../data/boards.js`)
 
-
+// 게시판 목록 페이지
 const getList = (req,res) => {
     res.render("boards/list.html", {
         boards
     })
 }
-
+// 글 생성 페이지
 const getCreate = (req,res) => {
     res.render("boards/create.html")
 }
-
+// 글 생성 페이지에서 post 발생시 
 const postCreate = (req,res) => {
    const { user_id, writer, title, content } = req.body;
    const now = new Date();
@@ -26,12 +26,21 @@ const postCreate = (req,res) => {
     hit: 0,
     created_at:date
    });
-   
+
    res.redirect("/boards");
+}
+
+const getView = (req,res) => {
+    const { user_id } = req.params;
+    const board = boards.find((board) => user_id === board.user_id)
+    res.render("boards/view.html",{
+        board
+    })
 }
 
 module.exports = {
     getList,
     getCreate,
-    postCreate
+    postCreate,
+    getView
 };

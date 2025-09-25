@@ -10,6 +10,13 @@ main form {
     flex-direction: column;
 }
 
+main p {
+    text-align: center;
+    align-items: center;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
 form input {
     border-radius: 5px;
     border-style: none;
@@ -30,7 +37,7 @@ form textarea {
     background-color: #FFFAFA;
 }
 
-form .buttonArea {
+.buttonArea {
     width: 800px;
     padding: 25px 0;
     display: flex;
@@ -51,10 +58,12 @@ form .buttonArea {
 
 .buttonArea button:nth-child(1) {
     background-color: #C0C0C0;
+
 }
 
 .buttonArea button:nth-child(2) {
     background-color: #3498DB;
+
 }
 
 

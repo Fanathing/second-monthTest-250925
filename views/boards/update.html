@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ board.user_id }} 의 수정페이지 </title>
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/update.css">
 
 </head>
 <body>
@@ -14,8 +15,8 @@
         </div>
     </header>
     <main>
+        <h3>이곳은 [ {{ board.title }} ] 글의 수정 페이지 입니다!</h3>
         <div>
-            <h3>이곳은 [ {{ board.title }} ] 글의 수정 페이지 입니다!</h3>
             <form action="/boards/update/{{ board.user_id }}" method="post">
                 <p>닉네임</p>
                 <input type="text" name="writer" value="{{ board.writer }}"/>
@@ -23,8 +24,10 @@
                 <input type="text" name="title" value="{{ board.title }}"/>
                 <p>내용</p>
                 <textarea type="text" name="content">{{ board.content }}</textarea>
-                <button type="button" onclick="location.href=`/boards/view/{{ board.user_id }}`">뒤로 가기</button>
-                <button type="submit">수정 완료</button>
+                <div class="buttonArea">
+                    <button type="button" onclick="location.href=`/boards/view/{{ board.user_id }}`">뒤로 가기</button>
+                    <button type="submit">수정 완료</button>
+                </div>
             </form>
         </div>
     </main>

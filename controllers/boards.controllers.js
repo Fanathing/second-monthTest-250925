@@ -30,6 +30,7 @@ const postCreate = (req,res) => {
    res.redirect("/boards");
 }
 
+// 글 상세 페이지
 const getView = (req,res) => {
     const { user_id } = req.params;
     const board = boards.find((board) => user_id === board.user_id)
@@ -38,9 +39,19 @@ const getView = (req,res) => {
     })
 }
 
+// 글 수정 페이지
+const getUpdate = (req,res) => {
+    const { user_id } = req.params;
+    const board = boards.find((board) => user_id === board.user_id)
+    res.render("boards/update.html",{
+        board
+    })
+}
+
 module.exports = {
     getList,
     getCreate,
     postCreate,
-    getView
+    getView,
+    getUpdate
 };

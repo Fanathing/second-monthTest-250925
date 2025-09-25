@@ -13,14 +13,14 @@
     </header>
     <inner>
         <div>
-            <h3>이곳은 {{ board.title }} 글의 수정 페이지 입니다!</h3>
+            <h3>이곳은 [ {{ board.title }} ] 글의 수정 페이지 입니다!</h3>
             <form action="/boards/view/{{ board.user_id }}" method="post">
                 <p>닉네임</p>
-                <input type="text" name="user_id" value="{{ board.writer }}"/>
+                <input type="text" name="writer" value="{{ board.writer }}"/>
                 <p>제목</p>
-                <input type="text" name="user_id" value="{{ board.title }}"/>
+                <input type="text" name="title" value="{{ board.title }}"/>
                 <p>내용</p>
-                <input type="text" name="user_id" value="{{ board.content }}"/>
+                <textarea type="text" name="content">{{ board.content }}</textarea>
                 <button type="button" onclick="location.href=`/boards/view/{{ board.user_id }}`">뒤로 가기</button>
                 <button type="submit">수정 완료</button>
             </form>

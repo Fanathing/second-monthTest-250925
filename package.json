@@ -1,0 +1,16 @@
+{
+  "name": "second-monthtest-250925",
+  "version": "1.0.0",
+  "description": "HTTP 기반의 CRUD 게시판 구현",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nunjucks": "^3.2.4"
+  }
+}

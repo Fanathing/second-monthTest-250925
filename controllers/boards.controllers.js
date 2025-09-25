@@ -11,6 +11,7 @@ const getList = (req,res) => {
 const getCreate = (req,res) => {
     res.render("boards/create.html");
 }
+
 // 글 생성 페이지에서 post 발생시 
 const postCreate = (req,res) => {
    const { user_id, writer, title, content } = req.body;
@@ -27,7 +28,7 @@ const postCreate = (req,res) => {
     created_at:date
    });
 
-   res.redirect("/boards");
+   return res.json({ success: true, message: "글 생성 성공"});
 }
 
 // 글 상세 페이지

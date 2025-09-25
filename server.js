@@ -4,6 +4,9 @@ const path = (`${__dirname}/views/boards`);
 const nunjucks = require("nunjucks");
 const boardsRouter = require(`./router/boards.router.js`);
 
+//json을 파싱하겠단 설정
+app.use(express.json());  
+
 // 언랭코디드를 파싱해서 가져오겠다는 설정
 app.use(express.urlencoded({ extended: false }));
 // router를 사용할건데 공통 엔드 포인트는 /boards를 사용하겠다.

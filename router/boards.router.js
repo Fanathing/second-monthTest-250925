@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get("/", boardsControllers.getList);
 router.get("/create", boardsControllers.getCreate);
+router.post("/create", boardsControllers.postCreate);
 
 module.exports = router;

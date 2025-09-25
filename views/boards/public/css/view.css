@@ -7,11 +7,24 @@ main {
 .titleArea {
     text-decoration: underline;
     text-underline-offset: 10px;
-    padding: 30px 0;
 }
 .titleArea a {
     font-size: 30px;
     font-weight: 500;
+}
+
+.deleteBtn {
+    padding: 0 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    border: 0px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #B22222;
+    margin: 0 0 0 58%;
 }
 
 .contentArea {
@@ -22,7 +35,6 @@ main {
     border: 0px solid #EE82EE;
     height: 600px;
     border-radius: 5px;
-
 }
 
 .contentArea p{
@@ -49,14 +61,10 @@ main {
 }
 
 .buttonArea > button:nth-child(1) {
-background-color: #C0C0C0;
+    background-color: #C0C0C0;
 }
 
 .buttonArea > button:nth-child(2) {
-background-color: #3498DB;
-}
-
-.buttonArea > button:nth-child(3) {
-background-color: #B22222;
+    background-color: #3498DB;
 }
 

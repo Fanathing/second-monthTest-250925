@@ -10,13 +10,13 @@
 <body>
     <header>
         <div>
-            <h1>Month_Test</h1>
+            <a href="/">Month_Test</a>
         </div>
     </header>
     <main>
         <h3>이곳은 글 작성 페이지 입니다!</h3>
         <div>
-            <form class="createFrom">
+            <form class="createFrom"action="/boards/create" method="post">
                 <input type="text" name="user_id" placeholder="아이디를 입력해주세요"/>
                 <input type="text" name="writer" placeholder="닉네임을 입력해주세요"/>
                 <input type="text" name="title" placeholder="제목을 입력해주세요"/>
@@ -30,7 +30,7 @@
     </main>
     <footer>
         <div>
-            <p>© 250925 @All Copyright to 성영</p>
+            <p>© 250925 @All Copyright belong to 성영</p>
         </div>
     </footer>
     <script src="/js/create.js"></script>

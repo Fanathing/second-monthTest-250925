@@ -1,5 +1,6 @@
 const createFrom = document.querySelector(".createFrom");
 
+// 작성 완료 버튼을 눌렀을때
 const creatText = async (e) => {
     e.preventDefault();
 
@@ -12,6 +13,7 @@ const creatText = async (e) => {
     const data = Object.fromEntries(formData);
 
     try {
+        // fetch를 이용하여 요청을 보냄
         const response = await fetch(`/boards/create`, {
             method: "POST",
             headers: {

@@ -4,6 +4,7 @@ const updateForm = document.querySelector(".updateForm");
 const url = location.pathname.split("/");
 const user_id = url[3];
 
+// 수정하기 버튼을 눌렀을 때
 const updateText = async (e) => {
     e.preventDefault();
 
@@ -37,13 +38,13 @@ const updateText = async (e) => {
     }
 };
 
-
+// 뒤로가기 버튼을 눌렀을때
 const getBack = (e) => {
     if(e.target.className !== "backBtn") return;
-    const userCheck = confirm("글 상세 페이지로 이동하시겠습니까?")
+    const userCheck = confirm(`글 상세 페이지로 이동하시겠습니까?\n지금까지 수정하신 내용이 사라지게 됩니다.`)
     if (!userCheck) return;
     window.location.href = `/boards/view/${user_id}`;
-}
+};
 
 updateForm.addEventListener("click", getBack);
 updateForm.addEventListener("submit", updateText);

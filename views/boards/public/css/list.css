@@ -28,7 +28,6 @@ main li a {
 }
 
 main li a:nth-child(1) {
-
     width: 80px;
 }
 main li a:nth-child(2) { 

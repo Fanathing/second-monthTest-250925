@@ -10,14 +10,15 @@
 <body>
     <header>
         <div>
-            <h1>Month_Test</h1>
+            <a href="/">Month_Test</a>
         </div>
     </header>
     <main>
         <div class="titleArea">
-            <a> {{ board.title }} / </a>
-            <a> {{ board.writer }}</a>
+            <a> {{ board.title }} /</a>
+            <a> 작성자 {{ board.writer }}</a>
         </div>
+            <button class="deleteBtn"type="button">삭제 하기</button>
         <div class="contentArea">
             <p>{{ board.content }}</p>
             <p>작성된 날짜 / {{ board.created_at }}</p>
@@ -31,12 +32,11 @@
         <div class="buttonArea">
             <button type="button" onclick="location.href=`/boards`">뒤로 가기</button>
             <button class="updateBtn"type="button">수정 페이지</button>
-            <button class="deleteBtn"type="button">삭제 하기</button>
         </div>
     </main>
     <footer>
         <div>
-            <p>© 250925 @All Copyright to 성영</p>
+            <p>© 250925 @All Copyright belong to 성영</p>
         </div>
     </footer>
     <script src="/js/view.js"></script>

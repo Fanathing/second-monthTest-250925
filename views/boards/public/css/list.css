@@ -32,10 +32,10 @@ main li a:nth-child(1) {
     width: 80px;
 }
 main li a:nth-child(2) { 
-    width: 500px; 
+    width: 400px; 
 }
 main li a:nth-child(3) { 
-    width: 110px; 
+    width: 210px; 
 }
 main li a:nth-child(4) {
     width: 100px; 

@@ -23,4 +23,12 @@ const deleteText = async(e) => {
     }
 }
 
-buttonArea.addEventListener("click", deleteText)
+const getUpdat = (e) => {
+    if(e.target.className !== "updateBtn") return;
+    const userCheck = confirm("글 수정 페이지로 이동하시겠습니까?")
+    if (!userCheck) return;
+    window.location.href = `/boards/update/${user_id}`;
+}
+
+buttonArea.addEventListener("click", deleteText);
+buttonArea.addEventListener("click", getUpdat);

@@ -37,5 +37,14 @@ const updateText = async (e) => {
     }
 };
 
+
+const getBack = (e) => {
+    if(e.target.className !== "backBtn") return;
+    const userCheck = confirm("글 상세 페이지로 이동하시겠습니까?")
+    if (!userCheck) return;
+    window.location.href = `/boards/view/${user_id}`;
+}
+
+updateForm.addEventListener("click", getBack);
 updateForm.addEventListener("submit", updateText);
 

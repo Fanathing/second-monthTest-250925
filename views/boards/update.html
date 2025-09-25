@@ -14,7 +14,7 @@
     <inner>
         <div>
             <h3>이곳은 [ {{ board.title }} ] 글의 수정 페이지 입니다!</h3>
-            <form action="/boards/view/{{ board.user_id }}" method="post">
+            <form action="/boards/update/{{ board.user_id }}" method="post">
                 <p>닉네임</p>
                 <input type="text" name="writer" value="{{ board.writer }}"/>
                 <p>제목</p>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작성페이지</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Month_Test</h1>
+        </div>
+    </header>
+    <inner>
+        <div>
+            <h3>이곳은 글 작성 페이지 입니다!</h3>
+            <form action="/board" method="post">
+                <input type="text" name="user_id" placeholder="아이디를 입력해주세요"/>
+                <input type="text" name="writer" placeholder="닉네임을 입력해주세요"/>
+                <input type="text" name="title" placeholder="제목을 입력해주세요"/>
+                <input type="text" name="content" placeholder="내용을 입력해주세요"/>
+                <button type="button" onclick="location.href=`/board`">뒤로 가기</button>
+                <button type="submit">작성 완료</button>
+            </form>
+        </div>
+    </inner>
+    <footer>
+        <div>
+            <p>© 250925 @All Copyright to 성영</p>
+        </div>
+    </footer>
+</body>
+</html>

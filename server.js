@@ -22,7 +22,7 @@ app.use(express.static(`${path}/public`));
 
 // "/" 요청시 메인페이지인 index.html 응답
 app.get("/", (req,res) => {
-    res.sendFile(`${path}/index.html`)
+    res.sendFile(`${__dirname}/index.html`)
 })
 
 app.listen(3000, () => {

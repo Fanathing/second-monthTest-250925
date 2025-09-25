@@ -49,7 +49,6 @@ const getUpdate = (req,res) => {
 }
 
 // 글 수정 페이지에서 post 발생시
-
 const postUpdate = (req,res) => {
     const { user_id } = req.params;
     const { writer, title, content } = req.body;
@@ -62,11 +61,33 @@ const postUpdate = (req,res) => {
     res.redirect(`/boards/view/${user_id}`);
 
 }
+
+// 글 상세페이지에서 삭제 버튼으로 get 발생시
+const getDelete = (req,res) => {
+    const { user_id } = req.params;
+
+    boards.map((board, i) => {
+        if(user_id === board.user_id){
+            boards.splice(i, 1);
+        }
+    })
+        // return res.json({ success: true, message: "삭제 성공"})
+
+    // for(let i = 0; i < boards.length; i++) {
+    //     if(user_id === boards[i].user_id) {
+    //         boards.splice(i, 1);
+    //         break;
+    //     }
+    // }
+    res.redirect(`/boards`);
+
+}
 module.exports = {
     getList,
     getCreate,
     postCreate,
     getView,
     getUpdate,
-    postUpdate
+    postUpdate,
+    getDelete
 };

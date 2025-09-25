@@ -2,3 +2,30 @@
     padding: 0;
     margin: 0;
 }
+
+header {
+    margin: 0 auto;
+    background-color: #2C3E50;
+    width: 100%;
+    height: 60px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F5F6FA;
+    align-items: center;
+}
+
+
+footer {
+    margin: 0 auto;
+    background-color: #34495E;
+    width: 100%;
+    height: 60px;
+    
+}

@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const path = (`${__dirname}/views/boards`);
 const nunjucks = require("nunjucks");
+const boardsRouter = require(`./router/boards.router.js`);
+
 // 언랭코디드를 파싱해서 가져오겠다는 설정
 app.use(express.urlencoded({ extended: false }));
-
-const boardsRouter = (`./router/boards.router.js`);
-
-app.use("/boards", boardsRouter)
+// router를 사용할건데 공통 엔드 포인트는 /boards를 사용하겠다.
+app.use("/boards", boardsRouter);
 
 // 넌적스와 익스프레스를 연결(템플린엔진 사용)
 app.set("view engine", "html");

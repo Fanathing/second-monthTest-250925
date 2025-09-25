@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판페이지</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Month_Test</h1>
+        </div>
+    </header>
+    <inner>
+        <div>
+            <h3>이곳은 게시판 페이지 입니다!</h3>
+            <ul>
+                {% for board in boards %}
+                    <li>
+                        <a>{{ board.id }}</a>
+                        <a href="/boards/{{ board.user_id }}">{{ board.title }}</a>
+                        <a>{{ board.writer }}</a>
+                        <a>{{ board.created_at }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </inner>
+    <footer>
+        <div>
+            <p>© 250925 @All Copyright to 성영</p>
+        </div>
+    </footer>
+</body>
+</html>
